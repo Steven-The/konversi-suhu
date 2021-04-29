@@ -1,0 +1,19 @@
+.first{
+    background-color: aqua;
+    flex-direction: column;
+    font-size: large;  
+    text-align: center; 
+}
+
+.second{
+    background-color: red;
+    font-size: large;
+    text-align: center;
+
+}
+
+.third{
+    background-color: rgb(224, 255, 47);
+    font-size: large;
+    text-align: center;
+}

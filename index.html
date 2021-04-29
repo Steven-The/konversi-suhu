@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi Suhu</title>
+    <link rel ="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="first">
+    <h1>Converter Temperature</h1>
+    Input Celcius :<br>
+    <input id="input" type="number" placeholder="">
+    <button id="btn" onclick="btnFunction()">Convert</button>
+    <h3>Celcius : <span id="Celcius"></span></h3>
+    <h3>Farenheit : <span id="Farenheit"></span></h3>
+    <h3>Kelvin : <span id="Kelvin"></span></h3>
+    </div>
+
+    <div class="second">
+    Input Farenheit :<br>
+    <input id="input1" type="number1" placeholder="">
+    <button id="btn1" onclick="btnFunction1()">Convert</button>
+    <h3>Celcius : <span id="Celcius1"></span></h3>
+    <h3>Farenheit : <span id="Farenheit1"></span></h3>
+    <h3>Kelvin : <span id="Kelvin1"></span></h3>
+    </div>
+
+    <div class="third">
+    Input Kelvin :<br>
+    <input id="input2" type="number2" placeholder="">
+    <button id="btn2" onclick="btnFunction2()">Convert</button>
+    <h3>Celcius : <span id="Celcius2"></span></h3>
+    <h3>Farenheit : <span id="Farenheit2"></span></h3>
+    <h3>Kelvin : <span id="Kelvin2"></span></h3>
+    </div>
+
+    <script>
+        function btnFunction(){
+            var input = document.getElementById("input").value;
+            var celcius = input;
+            var farenheit = (input*1.8) + 32;
+            var kelvin = parseInt(input) + 273.15;
+
+            document.getElementById("Celcius").innerHTML = "";
+            document.getElementById("Celcius").innerHTML +=celcius +" Celcius";
+
+            document.getElementById("Farenheit").innerHTML = "";
+            document.getElementById("Farenheit").innerHTML +=farenheit +" Farenheit";
+
+            document.getElementById("Kelvin").innerHTML = "";
+            document.getElementById("Kelvin").innerHTML +=kelvin +" Kelvin";
+        }
+
+        function btnFunction1(){
+            var input1 = document.getElementById("input1").value;
+            var celcius1 = (input1 - 32)/1.8;
+            var farenheit1 = input1;
+            var kelvin1 = parseInt((input1-32)/1.8) + 273.15;
+
+            document.getElementById("Celcius1").innerHTML = "";
+            document.getElementById("Celcius1").innerHTML +=celcius1 +" Celcius";
+
+            document.getElementById("Farenheit1").innerHTML = "";
+            document.getElementById("Farenheit1").innerHTML +=farenheit1 +" Farenheit";
+
+            document.getElementById("Kelvin1").innerHTML = "";
+            document.getElementById("Kelvin1").innerHTML +=kelvin1 +" Kelvin";
+        }
+
+        function btnFunction2(){
+            var input2 = document.getElementById("input2").value;
+            var celcius2 = input2-273.15;
+            var farenheit2 = ((input2-273.15)*1.8)+32;
+            var kelvin2 = input2;
+
+            document.getElementById("Celcius2").innerHTML = "";
+            document.getElementById("Celcius2").innerHTML +=celcius2 +" Celcius";
+
+            document.getElementById("Farenheit2").innerHTML = "";
+            document.getElementById("Farenheit2").innerHTML +=farenheit2 +" Farenheit";
+
+            document.getElementById("Kelvin2").innerHTML = "";
+            document.getElementById("Kelvin2").innerHTML +=kelvin2 +" Kelvin";
+        }
+    </script>
+</body>
+</html>
